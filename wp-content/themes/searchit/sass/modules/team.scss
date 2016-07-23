@@ -1,52 +1,52 @@
 .team-section {
 
-  .team-left-column {
-    background-color: $lgrey;
-  }
+	.team-left-column {
+		background-color: $lgrey;
+	}
 
-  .team-right-column {
-    padding: 50px 30px;
+	.team-right-column {
+		padding: 50px 30px;
 
-    &-single {
-      padding: 15px 30px;
+		&-single {
+			padding: 15px 30px;
 
-      @media(max-width: 1024px) {
-        padding: 15px 20px;
-      }
-      
-      &-img {
-        -webkit-border-radius: 350px;
-        border-radius: 350px;
-        overflow: hidden;
-        border: 5px solid $seaL;
-        max-width: 350px;
-        position: relative;
-        margin: 0 auto;
+			@media(max-width: 1024px) {
+				padding: 15px 20px;
+			}
+			
+			&-img {
+				-webkit-border-radius: 350px;
+				border-radius: 350px;
+				overflow: hidden;
+				border: 5px solid $seaL;
+				max-width: 350px;
+				position: relative;
+				margin: 0 auto;
 
-        img {
-          width: 100%;
-          max-width: 350px;
-          max-height: 350px;
-        }
+				img {
+					width: 100%;
+					max-width: 350px;
+					max-height: 350px;
+				}
 
-      }
+			}
 
-      &-text {
-        padding: 10px 30px 0;
-        text-align: center;
+			&-text {
+				padding: 10px 30px 0;
+				text-align: center;
 
-        @media(max-width: 1024px) {
-          padding: 10px 0;
-        }
+				@media(max-width: 1024px) {
+					padding: 10px 0;
+				}
 
-        hr {
-          margin: 0 auto;
-        }
+				hr {
+					margin: 0 auto;
+				}
 
-      }
+			}
 
-    }
+		}
 
-  }
+	}
 
 }
