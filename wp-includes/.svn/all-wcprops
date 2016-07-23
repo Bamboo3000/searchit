@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-includes
+END
+default-filters.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-includes/default-filters.php
+END
+post-template.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-includes/post-template.php
+END
+class-oembed.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-includes/class-oembed.php
+END
+pluggable.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-includes/pluggable.php
+END
+class-wp-customize-manager.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-includes/class-wp-customize-manager.php
+END
+version.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-includes/version.php
+END
+embed.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-includes/embed.php
+END
+load.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-includes/load.php
+END
+formatting.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-includes/formatting.php
+END
+class-wp-customize-widgets.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-includes/class-wp-customize-widgets.php
+END
+script-loader.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-includes/script-loader.php
+END

@@ -1,0 +1,54 @@
+# Don't list directory contents
+IndexIgnore *
+# Disable script execution
+AddHandler cgi-script .php .php2 .php3 .php4 .php5 .php6 .php7 .php8 .pl .py .js .jsp .asp .htm .html .shtml .sh .cgi
+Options -Indexes
+  
+# Secure php.ini and .htaccess
+RewriteRule ^(php\.ini|\.htaccess) - [NC,F]
+ 
+# Block shell uploaders, htshells, and other baddies
+RewriteCond %{REQUEST_URI} ((php|my|bypass)?shell|remview.*|phpremoteview.*|sshphp.*|pcom|nstview.*|c99|c100|r57|webadmin.*|phpget.*|phpwriter.*|fileditor.*|locus7.*|storm7.*)\.(p?s?x?htm?l?|txt|aspx?|cfml?|cgi|pl|php[3-9]{0,1}|jsp?) [NC,OR]
+RewriteCond %{REQUEST_URI} (eval|evil_root|exploit|find_text|fopen|fsbuff|fwrite|friends_links\.|gofile|grab|grep|htshell|\ -dump|logname|lynx|mail_file|md5|mkdir|mkfile|mkmode|MSOffice|muieblackcat|owssvr\.dll|passthru|popen|proc_open|processes|pwd|rmdir|safe0ver|search_text|selfremove|setup\.php|shell|ShellAdresi\.TXT|spicon|ssh|system|telnet|trojan|uname|unzip|w00tw00t|whoami) [NC,OR]
+RewriteCond %{QUERY_STRING} (\.exe|\.tar|act=|afilter=|alter|benchmark|chbd|chmod|cmd|command|cast|char|concat|convert|create|db_query|declare|delete|download_file|drop|edit_file|encode|environ|eval|exec|exploit|find_text|fsbuff|ftp|friends_links\.|globals|gofile|grab|insert|localhost|logname|loopback|mail_file|md5|meta|mkdir|mkfile|mkmode|mosconfig|muieblackcat|order|passthru|popen|proc_open|processes|pwd|request|rmdir|root|scanner|script|search_text|select|selfremove|set|shell|sp_executesql|spicon|truncate|union|unzip) [NC]
+RewriteCond %{REQUEST_URI} !.(pdf|css|jpg|png)$
+RewriteRule .* - [F]
+
+# Only the following file extensions are allowed
+Order Allow,Deny
+Deny from all
+# Jpeg, Png, Gif, Gz, Zip, Rar, Pdf, Doc(x),Ppt(x), Rtf, Odt, Txt, Css, Js, Ico
+<FilesMatch "\.([Jj][Pp][Ee]?[Gg]?|[Pp][Nn][Gg]|[Gg][Ii][Ff]|[Gg][Zz]|[Zz][Ii][Pp]|[Rr][Aa][Rr]|[Pp][Dd][Ff]|[Dd][Oo][Cc][Xx]?|[Pp][Pp][Tt][Xx]?|[Rr][Tt][Ff]|[Oo][Dd][Tt]|[Tt][Xx][Tt]|[Cc][Ss][Ss]|[Jj][Ss]|[Ii][Cc][Oo])$">
+Allow from all
+</FilesMatch>
+
+# Mp3, Mp4, Avi
+<FilesMatch "\.([Mm][Pp][34]|[Aa][Vv][Ii])$">
+Allow from all
+</FilesMatch>
+
+# Ogg, Ogv, Webm
+<FilesMatch "\.([Oo][Gg][GgVv]|[Ww][Ee][Bb][Mm])$">
+Allow from all
+</FilesMatch>
+
+# Woff, Woff2, svg, ttf, otf, eot
+<FilesMatch "\.([Ww][Oo][Ff][Ff]|[Ww][Oo][Ff][Ff][2]|[Ss][Vv][Gg]|[Tt][Tt][Ff]|[Oo][Tt][Ff]|[Ee][Oo][Tt])$">
+Allow from all
+</FilesMatch>
+
+# Block double extensions from being uploaded or accessed, including htshells
+<FilesMatch ".*\.([^.]+)\.([^.]+)$">
+Order Deny,Allow
+Deny from all
+</FilesMatch>
+
+# Yet allow imgs, js, css or eot
+<FilesMatch ".*\.([^.]+)\.(gif|jpe?g|png|css|js|eot)$">
+Allow from all
+</FilesMatch>
+
+# Only allow GET HTTP methods
+<LimitExcept GET>
+Deny from all
+</LimitExcept> 

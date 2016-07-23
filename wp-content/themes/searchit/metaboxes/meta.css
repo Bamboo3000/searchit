@@ -1,0 +1,85 @@
+.my_meta_control .description
+{ display:none; }
+ 
+.my_meta_control label
+{ display:block; font-weight:bold; margin:6px; margin-bottom:0; margin-top:12px; }
+ 
+.my_meta_control label span
+{ display:inline; font-weight:normal; }
+ 
+.my_meta_control span
+{ color:#999; display:block; }
+ 
+.my_meta_control textarea, .my_meta_control input[type='text']
+{ margin-bottom:3px; width:99%; }
+ 
+.my_meta_control h4
+{ color:#999; font-size:1em; margin:15px 6px; text-transform:uppercase; }
+
+/*.my_meta_control .about-img,
+.my_meta_control .text{
+	width: 33.3333%;
+	float: left;
+}*/
+
+.project-left-column{
+	width:25%!important;
+	float:left;
+	display: block;
+	margin:20px 0 0 0!important;
+}
+.project-right-column{
+	width:70%!important;
+	margin:20px 0 0 3%!important;
+	float:left;
+	display: block;
+}
+.docopy-s_group.button{
+	margin-top: 30px!important;
+}
+.two-img{
+	width:49%;
+}
+.project-slider-img{
+	width:100%;
+	display: block;
+	float:none;
+}
+.project-slider-img p{
+	display: inline-block;
+}
+.project-slider-img .link{
+	width:59%;
+}
+.project-admin label{
+	width:20%;
+	display: block;
+	float:left;
+}
+.project-admin label,
+.project-admin textarea{
+	margin:5px 0;
+}
+.project-admin textarea{
+	width:80%;
+}
+
+.my_meta_control .customEditor
+{ margin:15px 6px; border:1px solid #ccc; }
+.my_meta_control .customEditor textarea
+{ border:0; }
+#post-body .my_meta_control .customEditor .mceStatusbar a.mceResize
+{ top:-2px; }
+/* extra styles used in other WPAlchemy meta boxes */
+.my_meta_control .description
+{ display:none; }
+.my_meta_control label
+{ display:block; font-weight:bold; margin:6px; margin-bottom:0; margin-top:12px; }
+.my_meta_control label span
+{ display:inline; font-weight:normal; }
+.my_meta_control span
+{ color:#999; }
+.my_meta_control textarea, .my_meta_control input[type='text']
+{ margin-bottom:3px; width:99%; }
+.my_meta_control h4
+{ color:#999; font-size:1em; margin:15px 6px; text-transform:uppercase; }

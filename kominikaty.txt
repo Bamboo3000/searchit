@@ -1,0 +1,12 @@
+<br />
+<b>Warning</b>:  array_slice() expects parameter 1 to be array, string given in <b>/home/users/jacobdeveloper/public_html/searchit/wp-includes/plugin.php</b> on line <b>601</b><br />
+<br />
+<b>Warning</b>:  call_user_func_array() expects parameter 2 to be array, null given in <b>/home/users/jacobdeveloper/public_html/searchit/wp-includes/plugin.php</b> on line <b>601</b><br />
+<br />
+<b>Warning</b>:  array_slice() expects parameter 1 to be array, string given in <b>/home/users/jacobdeveloper/public_html/searchit/wp-includes/plugin.php</b> on line <b>601</b><br />
+<br />
+<b>Warning</b>:  call_user_func_array() expects parameter 2 to be array, null given in <b>/home/users/jacobdeveloper/public_html/searchit/wp-includes/plugin.php</b> on line <b>601</b><br />
+<br />
+<b>Warning</b>:  array_slice() expects parameter 1 to be array, string given in <b>/home/users/jacobdeveloper/public_html/searchit/wp-includes/plugin.php</b> on line <b>601</b><br />
+<br />
+<b>Warning</b>:  call_user_func_array() expects parameter 2 to be array, null given in <b>/home/users/jacobdeveloper/public_html/searchit/wp-includes/plugin.php</b> on line <b>601</b><br />

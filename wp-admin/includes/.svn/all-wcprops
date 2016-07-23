@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-admin/includes
+END
+post.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-admin/includes/post.php
+END
+class-wp-media-list-table.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-admin/includes/class-wp-media-list-table.php
+END
+ajax-actions.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-admin/includes/ajax-actions.php
+END
+upgrade.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/wordpress/!svn/ver/37802/tags/4.5.3/wp-admin/includes/upgrade.php
+END

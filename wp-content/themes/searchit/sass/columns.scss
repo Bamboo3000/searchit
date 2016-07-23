@@ -1,0 +1,579 @@
+/*  COLUMNS  */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.row {
+  // margin: 0 -15px
+  padding: 0;
+  position: relative;
+}
+
+.container,
+.container-small {
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+.container-full {
+  height: auto;
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.container:after, .container-full:after, .container-small:after, .row:after {
+  clear: both;
+}
+
+.clearfix:before, .clearfix:after, .container:before, .container:after, .container-full:before, .container-full:after, .container-small:before, .container-small:after, .row:before, .row:after {
+  display: table;
+  content: "";
+}
+
+// *[class*="col-"]
+// 	position: relative
+// 	min-height: 1px
+// 	// padding: 0 15px
+// 	margin: 0
+// 	float: left
+
+*[class*="col-"] {
+  position: relative;
+  min-height: 1px;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+@for $i from 1 through 1 {
+  .col-xs-#{$i}-of-1 {
+    width: percentage($i / 1);
+  }
+}
+
+@for $i from 1 through 2 {
+  .col-xs-#{$i}-of-2 {
+    width: percentage($i / 2);
+  }
+}
+
+@for $i from 1 through 3 {
+  .col-xs-#{$i}-of-3 {
+    width: percentage($i / 3);
+  }
+}
+
+@for $i from 1 through 4 {
+  .col-xs-#{$i}-of-4 {
+    width: percentage($i / 4);
+  }
+}
+
+@for $i from 1 through 5 {
+  .col-xs-#{$i}-of-5 {
+    width: percentage($i / 5);
+  }
+}
+
+@for $i from 1 through 6 {
+  .col-xs-#{$i}-of-6 {
+    width: percentage($i / 6);
+  }
+}
+
+@for $i from 1 through 7 {
+  .col-xs-#{$i}-of-7 {
+    width: percentage($i / 7);
+  }
+}
+
+@for $i from 1 through 8 {
+  .col-xs-#{$i}-of-8 {
+    width: percentage($i / 8);
+  }
+}
+
+@for $i from 1 through 9 {
+  .col-xs-#{$i}-of-9 {
+    width: percentage($i / 9);
+  }
+}
+
+@for $i from 1 through 10 {
+  .col-xs-#{$i}-of-10 {
+    width: percentage($i / 10);
+  }
+}
+
+@for $i from 1 through 11 {
+  .col-xs-#{$i}-of-11 {
+    width: percentage($i / 11);
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-xs-#{$i}-of-12 {
+    width: percentage($i / 12);
+  }
+}
+
+@for $i from 1 through 13 {
+  .col-xs-#{$i}-of-13 {
+    width: percentage($i / 13);
+  }
+}
+
+@for $i from 1 through 14 {
+  .col-xs-#{$i}-of-14 {
+    width: percentage($i / 14);
+  }
+}
+
+@for $i from 1 through 15 {
+  .col-xs-#{$i}-of-15 {
+    width: percentage($i / 15);
+  }
+}
+
+@for $i from 1 through 16 {
+  .col-xs-#{$i}-of-16 {
+    width: percentage($i / 16);
+  }
+}
+
+/*  S screen > 580  */
+@media(min-width: 36.250em) {
+  @for $i from 1 through 1 {
+    .col-s-#{$i}-of-1 {
+      width: percentage($i / 1);
+    }
+  }
+  @for $i from 1 through 2 {
+    .col-s-#{$i}-of-2 {
+      width: percentage($i / 2);
+    }
+  }
+  @for $i from 1 through 3 {
+    .col-s-#{$i}-of-3 {
+      width: percentage($i / 3);
+    }
+  }
+  @for $i from 1 through 4 {
+    .col-s-#{$i}-of-4 {
+      width: percentage($i / 4);
+    }
+  }
+  @for $i from 1 through 5 {
+    .col-s-#{$i}-of-5 {
+      width: percentage($i / 5);
+    }
+  }
+  @for $i from 1 through 6 {
+    .col-s-#{$i}-of-6 {
+      width: percentage($i / 6);
+    }
+  }
+  @for $i from 1 through 7 {
+    .col-s-#{$i}-of-7 {
+      width: percentage($i / 7);
+    }
+  }
+  @for $i from 1 through 8 {
+    .col-s-#{$i}-of-8 {
+      width: percentage($i / 8);
+    }
+  }
+  @for $i from 1 through 9 {
+    .col-s-#{$i}-of-9 {
+      width: percentage($i / 9);
+    }
+  }
+  @for $i from 1 through 10 {
+    .col-s-#{$i}-of-10 {
+      width: percentage($i / 10);
+    }
+  }
+  @for $i from 1 through 11 {
+    .col-s-#{$i}-of-11 {
+      width: percentage($i / 11);
+    }
+  }
+  @for $i from 1 through 12 {
+    .col-s-#{$i}-of-12 {
+      width: percentage($i / 12);
+    }
+  }
+  @for $i from 1 through 13 {
+    .col-s-#{$i}-of-13 {
+      width: percentage($i / 13);
+    }
+  }
+  @for $i from 1 through 14 {
+    .col-s-#{$i}-of-14 {
+      width: percentage($i / 14);
+    }
+  }
+  @for $i from 1 through 15 {
+    .col-s-#{$i}-of-15 {
+      width: percentage($i / 15);
+    }
+  }
+  @for $i from 1 through 16 {
+    .col-s-#{$i}-of-16 {
+      width: percentage($i / 16);
+    }
+  }
+}
+
+
+/*  M screen > 800  */
+@media(min-width:50em) {
+  @for $i from 1 through 1 {
+    .col-m-#{$i}-of-1 {
+      width: percentage($i / 1);
+    }
+  }
+  @for $i from 1 through 2 {
+    .col-m-#{$i}-of-2 {
+      width: percentage($i / 2);
+    }
+  }
+  @for $i from 1 through 3 {
+    .col-m-#{$i}-of-3 {
+      width: percentage($i / 3);
+    }
+  }
+  @for $i from 1 through 4 {
+    .col-m-#{$i}-of-4 {
+      width: percentage($i / 4);
+    }
+  }
+  @for $i from 1 through 5 {
+    .col-m-#{$i}-of-5 {
+      width: percentage($i / 5);
+    }
+  }
+  @for $i from 1 through 6 {
+    .col-m-#{$i}-of-6 {
+      width: percentage($i / 6);
+    }
+  }
+  @for $i from 1 through 7 {
+    .col-m-#{$i}-of-7 {
+      width: percentage($i / 7);
+    }
+  }
+  @for $i from 1 through 8 {
+    .col-m-#{$i}-of-8 {
+      width: percentage($i / 8);
+    }
+  }
+  @for $i from 1 through 9 {
+    .col-m-#{$i}-of-9 {
+      width: percentage($i / 9);
+    }
+  }
+  @for $i from 1 through 10 {
+    .col-m-#{$i}-of-10 {
+      width: percentage($i / 10);
+    }
+  }
+  @for $i from 1 through 11 {
+    .col-m-#{$i}-of-11 {
+      width: percentage($i / 11);
+    }
+  }
+  @for $i from 1 through 12 {
+    .col-m-#{$i}-of-12 {
+      width: percentage($i / 12);
+    }
+  }
+  @for $i from 1 through 13 {
+    .col-m-#{$i}-of-13 {
+      width: percentage($i / 13);
+    }
+  }
+  @for $i from 1 through 14 {
+    .col-m-#{$i}-of-14 {
+      width: percentage($i / 14);
+    }
+  }
+  @for $i from 1 through 15 {
+    .col-m-#{$i}-of-15 {
+      width: percentage($i / 15);
+    }
+  }
+  @for $i from 1 through 16 {
+    .col-m-#{$i}-of-16 {
+      width: percentage($i / 16);
+    }
+  }
+}
+
+
+/*  L screen > 1024  */
+@media(min-width:64em) {
+  @for $i from 1 through 1 {
+    .col-l-#{$i}-of-1 {
+      width: percentage($i / 1);
+    }
+  }
+  @for $i from 1 through 2 {
+    .col-l-#{$i}-of-2 {
+      width: percentage($i / 2);
+    }
+  }
+  @for $i from 1 through 3 {
+    .col-l-#{$i}-of-3 {
+      width: percentage($i / 3);
+    }
+  }
+  @for $i from 1 through 4 {
+    .col-l-#{$i}-of-4 {
+      width: percentage($i / 4);
+    }
+  }
+  @for $i from 1 through 5 {
+    .col-l-#{$i}-of-5 {
+      width: percentage($i / 5);
+    }
+  }
+  @for $i from 1 through 6 {
+    .col-l-#{$i}-of-6 {
+      width: percentage($i / 6);
+    }
+  }
+  @for $i from 1 through 7 {
+    .col-l-#{$i}-of-7 {
+      width: percentage($i / 7);
+    }
+  }
+  @for $i from 1 through 8 {
+    .col-l-#{$i}-of-8 {
+      width: percentage($i / 8);
+    }
+  }
+  @for $i from 1 through 9 {
+    .col-l-#{$i}-of-9 {
+      width: percentage($i / 9);
+    }
+  }
+  @for $i from 1 through 10 {
+    .col-l-#{$i}-of-10 {
+      width: percentage($i / 10);
+    }
+  }
+  @for $i from 1 through 11 {
+    .col-l-#{$i}-of-11 {
+      width: percentage($i / 11);
+    }
+  }
+  @for $i from 1 through 12 {
+    .col-l-#{$i}-of-12 {
+      width: percentage($i / 12);
+    }
+  }
+  @for $i from 1 through 13 {
+    .col-l-#{$i}-of-13 {
+      width: percentage($i / 13);
+    }
+  }
+  @for $i from 1 through 14 {
+    .col-l-#{$i}-of-14 {
+      width: percentage($i / 14);
+    }
+  }
+  @for $i from 1 through 15 {
+    .col-l-#{$i}-of-15 {
+      width: percentage($i / 15);
+    }
+  }
+  @for $i from 1 through 16 {
+    .col-l-#{$i}-of-16 {
+      width: percentage($i / 16);
+    }
+  }
+}
+
+
+/*  XL screen > 1280  */
+@media(min-width:80.063em) {
+  @for $i from 1 through 1 {
+    .col-xl-#{$i}-of-1 {
+      width: percentage($i / 1);
+    }
+  }
+  @for $i from 1 through 2 {
+    .col-xl-#{$i}-of-2 {
+      width: percentage($i / 2);
+    }
+  }
+  @for $i from 1 through 3 {
+    .col-xl-#{$i}-of-3 {
+      width: percentage($i / 3);
+    }
+  }
+  @for $i from 1 through 4 {
+    .col-xl-#{$i}-of-4 {
+      width: percentage($i / 4);
+    }
+  }
+  @for $i from 1 through 5 {
+    .col-xl-#{$i}-of-5 {
+      width: percentage($i / 5);
+    }
+  }
+  @for $i from 1 through 6 {
+    .col-xl-#{$i}-of-6 {
+      width: percentage($i / 6);
+    }
+  }
+  @for $i from 1 through 7 {
+    .col-xl-#{$i}-of-7 {
+      width: percentage($i / 7);
+    }
+  }
+  @for $i from 1 through 8 {
+    .col-xl-#{$i}-of-8 {
+      width: percentage($i / 8);
+    }
+  }
+  @for $i from 1 through 9 {
+    .col-xl-#{$i}-of-9 {
+      width: percentage($i / 9);
+    }
+  }
+  @for $i from 1 through 10 {
+    .col-xl-#{$i}-of-10 {
+      width: percentage($i / 10);
+    }
+  }
+  @for $i from 1 through 11 {
+    .col-xl-#{$i}-of-11 {
+      width: percentage($i / 11);
+    }
+  }
+  @for $i from 1 through 12 {
+    .col-xl-#{$i}-of-12 {
+      width: percentage($i / 12);
+    }
+  }
+  @for $i from 1 through 13 {
+    .col-xl-#{$i}-of-13 {
+      width: percentage($i / 13);
+    }
+  }
+  @for $i from 1 through 14 {
+    .col-xl-#{$i}-of-14 {
+      width: percentage($i / 14);
+    }
+  }
+  @for $i from 1 through 15 {
+    .col-xl-#{$i}-of-15 {
+      width: percentage($i / 15);
+    }
+  }
+  @for $i from 1 through 16 {
+    .col-xl-#{$i}-of-16 {
+      width: percentage($i / 16);
+    }
+  }
+}
+
+
+/*  XXL screen > 1441  */
+@media(min-width:90.063em) {
+  @for $i from 1 through 1 {
+    .col-xxl-#{$i}-of-1 {
+      width: percentage($i / 1);
+    }
+  }
+  @for $i from 1 through 2 {
+    .col-xxl-#{$i}-of-2 {
+      width: percentage($i / 2);
+    }
+  }
+  @for $i from 1 through 3 {
+    .col-xxl-#{$i}-of-3 {
+      width: percentage($i / 3);
+    }
+  }
+  @for $i from 1 through 4 {
+    .col-xxl-#{$i}-of-4 {
+      width: percentage($i / 4);
+    }
+  }
+  @for $i from 1 through 5 {
+    .col-xxl-#{$i}-of-5 {
+      width: percentage($i / 5);
+    }
+  }
+  @for $i from 1 through 6 {
+    .col-xxl-#{$i}-of-6 {
+      width: percentage($i / 6);
+    }
+  }
+  @for $i from 1 through 7 {
+    .col-xxl-#{$i}-of-7 {
+      width: percentage($i / 7);
+    }
+  }
+  @for $i from 1 through 8 {
+    .col-xxl-#{$i}-of-8 {
+      width: percentage($i / 8);
+    }
+  }
+  @for $i from 1 through 9 {
+    .col-xxl-#{$i}-of-9 {
+      width: percentage($i / 9);
+    }
+  }
+  @for $i from 1 through 10 {
+    .col-xxl-#{$i}-of-10 {
+      width: percentage($i / 10);
+    }
+  }
+  @for $i from 1 through 11 {
+    .col-xxl-#{$i}-of-11 {
+      width: percentage($i / 11);
+    }
+  }
+  @for $i from 1 through 12 {
+    .col-xxl-#{$i}-of-12 {
+      width: percentage($i / 12);
+    }
+  }
+  @for $i from 1 through 13 {
+    .col-xxl-#{$i}-of-13 {
+      width: percentage($i / 13);
+    }
+  }
+  @for $i from 1 through 14 {
+    .col-xxl-#{$i}-of-14 {
+      width: percentage($i / 14);
+    }
+  }
+  @for $i from 1 through 15 {
+    .col-xxl-#{$i}-of-15 {
+      width: percentage($i / 15);
+    }
+  }
+  @for $i from 1 through 16 {
+    .col-xxl-#{$i}-of-16 {
+      width: percentage($i / 16);
+    }
+  }
+}

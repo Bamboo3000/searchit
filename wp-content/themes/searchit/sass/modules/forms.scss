@@ -1,0 +1,337 @@
+.apply-form-section {
+  form.apply-form {
+    padding: 10px 0 60px;
+    max-width: 600px;
+    position: relative;
+    @include clearfix;
+    -ms-input-placeholder: {
+      color: $dgrey !important;
+      opacity: 1 !important;
+    };
+
+    @media(max-width: 1023px) {
+      max-width: 450px;
+    }
+
+    @media(max-width: 500px) {
+      max-width: 280px;
+    }
+
+    input,
+    textarea {
+      width: 400px;
+      float: left;
+      margin: 5px 0;
+      margin-right: 20px;
+      outline: none;
+      height: 36px;
+      line-height: 34px;
+      border: 1px solid #cccccc;
+      font-size: 13px;
+      font-family: $mRegular;
+      padding: 0 10px;
+      color: $dgrey;
+      opacity: 1;
+      -webkit-appearance: none!important;
+      -moz-appearance: none!important;
+      appearance: none!important;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+
+      @media(max-width: 1023px) {
+        width: 310px;
+        margin-right: 5px;
+        font-size: 12px;
+      }
+
+      @media(max-width: 500px) {
+        width: 280px;
+        margin-right: 0;
+
+        &.name {
+          margin-top: 130px;
+        }
+
+      }
+
+      &[type="submit"] {
+        height: 38px;
+        line-height: 36px;
+        width: 190px;
+        display: block;
+        float: none;
+        border: none;
+        background: $seaL;
+        color: white;
+        font-family: $mMedium;
+        font-size: 14px;
+        cursor: pointer;
+
+        @media(max-width: 1023px) {
+          width: 155px;
+          margin-right: 5px;
+          font-size: 13px;
+        }
+
+        @media(max-width: 500px) {
+          width: 140px;
+          margin-right: 0;
+          font-size: 12px;
+        }
+
+      }
+      &.photo {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        padding: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+      }
+      &.photo + label {
+        border: 1px solid #cccccc;
+        background: transparent;
+        width: 160px;
+        height: 160px;
+        line-height: 160px;
+        text-align: center;
+        font-size: 14px;
+        display: block;
+        float: right;
+        margin: 4px 0;
+        margin-left: 20px;
+        cursor: pointer;
+
+        @media(max-width: 1023px) {
+          width: 125px;
+          height: 125px;
+          line-height: 125px;
+          margin-left: 10px;
+          font-size: 11px;
+        }
+
+        @media(max-width: 500px) {
+          margin-left: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+      }
+      &.cv {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        padding: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+      }
+      &.cv + label {
+        border: 1px solid #cccccc;
+        background: transparent;
+        width: 400px;
+        text-align: left;
+        font-size: 13px;
+        display: block;
+        float: left;
+        margin: 4px 0;
+        margin-right: 20px;
+        padding: 0 10px;
+        height: 36px;
+        line-height: 34px;
+        cursor: pointer;
+
+        @media(max-width: 1023px) {
+          width: 310px;
+          margin-right: 5px;
+          font-size: 12px;
+        }
+
+        @media(max-width: 500px) {
+          width: 280px;
+          margin-right: 0;
+        }
+
+      }
+    }
+    textarea {
+      height: 150px;
+      margin-bottom: 25px;
+
+      @media(max-width: 1023px) {
+        margin-bottom: 10px;
+      }
+
+    }
+    .photoLabel {
+      background-repeat: no-repeat;
+      background-size: 100% auto !important;
+      background-position: center center;
+    }
+    .applyFB,
+    .applyLI {
+      cursor: pointer;
+      height: 36px;
+      line-height: 36px;
+      width: 160px;
+      display: block;
+      margin: 4px auto;
+      margin-left: 20px;
+      float: left;
+      text-align: center;
+      background: #3b5998;
+      color: white;
+      font-family: $mMedium;
+      font-size: 12px;
+      cursor: pointer;
+
+      @media(max-width: 1023px) {
+        width: 125px;
+        margin-left: 10px;
+        margin-top: -40px;
+        font-size: 10px;
+
+        &.applyFB {
+          margin-top: -82px;
+        }
+
+      }
+
+      @media(max-width: 500px) {
+        position: absolute;
+        top: 133px;
+        left: 125px;
+        width: 145px;
+      }
+
+    }
+    .applyLI {
+      background: #0077b5;
+    }
+  }
+}
+
+form.wpcf7-form {
+  padding: 0px 0;
+  max-width: 600px;
+  -ms-input-placeholder: {
+    color: $dgrey !important;
+    opacity: 1 !important;
+  };
+
+  @media(max-width: 500px) {
+    max-width: 280px;
+  }
+
+  input,
+  textarea {
+    width: 400px;
+    float: left;
+    margin: 5px 0;
+    margin-right: 20px;
+    outline: none;
+    height: 36px;
+    line-height: 34px;
+    border: 1px solid #cccccc;
+    font-size: 13px;
+    font-family: $mRegular;
+    padding: 0 10px;
+    color: $dgrey;
+    opacity: 1;
+    -webkit-appearance: none!important;
+    -moz-appearance: none!important;
+    appearance: none!important;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+
+    @media(max-width: 500px) {
+      width: 280px;
+      font-size: 12px;
+    }
+
+    &[type="submit"] {
+      height: 38px;
+      line-height: 36px;
+      width: 190px;
+      display: block;
+      float: none;
+      border: none;
+      background: $seaL;
+      color: white;
+      font-family: $mMedium;
+      font-size: 14px;
+      cursor: pointer;
+
+      @media(max-width: 500px) {
+        width: 140px;
+        font-size: 13px;
+      }
+
+    }
+    &.file {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+  label.file {
+    border: 1px solid #cccccc;
+    background: transparent;
+    width: 400px;
+    text-align: left;
+    font-size: 13px;
+    display: block;
+    float: left;
+    margin: 4px 0;
+    margin-right: 20px;
+    padding: 0 10px;
+    height: 36px;
+    line-height: 34px;
+    cursor: pointer;
+
+    @media(max-width: 500px) {
+      width: 280px;
+      font-size: 12px;
+    }
+
+  }
+  textarea {
+    height: 150px;
+    margin-bottom: 25px;
+
+    @media(max-width: 500px) {
+      margin-bottom: 15px;
+    }
+
+  }
+  .photoLabel {
+    background-repeat: no-repeat;
+    background-size: 100% auto !important;
+    background-position: center center;
+  }
+  .applyFB,
+  .applyLI {
+    cursor: pointer;
+    height: 36px;
+    line-height: 36px;
+    width: 160px;
+    display: block;
+    margin: 4px auto;
+    margin-left: 20px;
+    float: left;
+    text-align: center;
+    background: #3b5998;
+    color: white;
+    font-family: $mMedium;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .applyLI {
+    background: #0077b5;
+  }
+}
