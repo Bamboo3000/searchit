@@ -1,4 +1,5 @@
 .apply-form-section {
+
 	form.apply-form {
 		padding: 10px 0 60px;
 		max-width: 600px;
@@ -192,11 +193,6 @@
 				margin-left: 10px;
 				margin-top: -40px;
 				font-size: 10px;
-
-				&.applyFB {
-					margin-top: -82px;
-				}
-
 			}
 
 			@media(max-width: 500px) {
@@ -204,6 +200,11 @@
 				top: 133px;
 				left: 125px;
 				width: 145px;
+
+				&.applyFB {
+					margin-top: -82px;
+				}
+
 			}
 
 		}
