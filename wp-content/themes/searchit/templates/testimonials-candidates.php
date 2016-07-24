@@ -11,9 +11,11 @@ Template Name: Testimonials Candidates
 				<hr>
 				<span>
 					<?php echo __( 'Testimonials', 'searchit' ); ?>
+					<?php // get_post_meta(get_the_ID(), '_my_sub_title_cv', TRUE ); ?>
 				</span>
 				<h2>
 					<?php echo __( 'References from our candidates', 'searchit' ); ?>
+					<?php // get_post_meta(get_the_ID(), '_my_main_title_cv', TRUE ); ?>
 				</h2>
 			</aside>
 		</div>

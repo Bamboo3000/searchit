@@ -186,6 +186,7 @@ include_once 'metaboxes/home1_spec.php';
 include_once 'metaboxes/universal_spec.php';
 include_once 'metaboxes/team_spec.php';
 include_once 'metaboxes/testimonials_spec.php';
+include_once 'metaboxes/uploadcv_spec.php';
 
 include_once 'includes/cron.php';
 
