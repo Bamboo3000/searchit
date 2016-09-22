@@ -84,50 +84,64 @@ function ajax_search(){
     	}
     	echo '</div>';
     }
-    if ( $search->have_posts() ) : 
-		while ( $search->have_posts() ) : $search->the_post(); ?>
+    if ( $search->have_posts() ) : ?>
+		<?php while ( $search->have_posts() ) : $search->the_post(); ?>
+			<?php 
+				$titlei = get_the_title();
+				$searchi = $query;
+				if (preg_match("/\b".$_POST['query']."\b/i", get_the_title())) :
+			?>
 			<article class="the-job">
 				<div class="row">
-					<div class="col-l-8-of-10">
+					<div class="col-xxl-8-of-10 col-xl-9-of-10 col-xs-1-of-1">
 						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<hr class="job-green">
 						<?php the_excerpt(); ?>
 						<div class="row in-short">
-							<?php if(get_post_meta(get_the_ID(), 'job_location', true)) : ?>
-							<div class="col-l-4-of-10">
+							<?php
+								$location = get_post_meta(get_the_ID(), 'job_location', true); 
+								if(!empty($location)) : 
+							?>
+							<div class="col-l-4-of-10 col-xs-1-of-1">
 								<p>
 									<strong><?php echo __('Location:', 'searchit'); ?></strong>
 									<?php 
-										echo get_post_meta(get_the_ID(), 'job_location', true);
+										echo $location;
 									 ?>
 								</p>
 							</div>
 							<?php endif; ?>
-							<?php if(get_post_meta(get_the_ID(), 'job_type', true)) : ?>
-							<div class="col-l-2-of-7">
+							<?php 
+								$type = get_post_meta(get_the_ID(), 'job_type', true);
+								if(!empty($type)) : 
+							?>
+							<div class="col-l-2-of-7 col-xs-1-of-1">
 								<p>
-									<strong><?php echo __('Type:', 'searchit'); ?></strong>
+									<strong><?php echo __('Type:', 'searchit');?></strong>
 									<?php 
-										echo get_post_meta(get_the_ID(), 'job_type', true);
+										echo $type;
 									 ?>
 								</p>
 							</div>
 							<?php endif; ?>
-							<?php if(get_post_meta(get_the_ID(), 'job_salary_min', true)) : ?>
-							<div class="col-l-5-of-16">
+							<?php 
+								$salaryMin = get_post_meta(get_the_ID(), 'job_salary_min', true);
+								if(!empty($salaryMin)) : 
+							?>
+							<div class="col-l-5-of-16 col-xs-1-of-1">
 								<p>
 									<strong><?php echo __('Salary:', 'searchit'); ?></strong>
 									<?php 
 										echo number_format(get_post_meta(get_the_ID(), 'job_salary_min', true), 0, ',', '.');
 									?>
 									<?php
-										$salaryMax = get_post_meta(get_the_ID(), 'job_salary_max', true);
+										$salaryMax = get_post_meta(get_the_ID(), 'job_salary_max', true); 
 										if(!empty($salaryMax)) : 
 									?>
 										-
 										<?php echo number_format(get_post_meta(get_the_ID(), 'job_salary_max', true), 0, ',', '.'); ?>
 									<?php endif; ?>
-									 euro
+									euro
 								</p>
 							</div>
 							<?php endif; ?>
@@ -137,7 +151,77 @@ function ajax_search(){
 					</div>
 				</div>
 			</article>
-		<?php endwhile;
+			<?php endif; ?>
+		<?php endwhile; ?>
+		<?php while ( $search->have_posts() ) : $search->the_post(); ?>
+			<?php if (!preg_match("/\b".$_POST['query']."\b/i", get_the_title())) : ?>
+			<article class="the-job">
+				<div class="row">
+					<div class="col-xxl-8-of-10 col-xl-9-of-10 col-xs-1-of-1">
+						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						<hr class="job-green">
+						<?php the_excerpt(); ?>
+						<div class="row in-short">
+							<?php
+								$location = get_post_meta(get_the_ID(), 'job_location', true); 
+								if(!empty($location)) : 
+							?>
+							<div class="col-l-4-of-10 col-xs-1-of-1">
+								<p>
+									<strong><?php echo __('Location:', 'searchit'); ?></strong>
+									<?php 
+										echo $location;
+									 ?>
+								</p>
+							</div>
+							<?php endif; ?>
+							<?php 
+								$type = get_post_meta(get_the_ID(), 'job_type', true);
+								if(!empty($type)) : 
+							?>
+							<div class="col-l-2-of-7 col-xs-1-of-1">
+								<p>
+									<strong><?php echo __('Type:', 'searchit');?></strong>
+									<?php 
+										echo $type;
+									 ?>
+								</p>
+							</div>
+							<?php endif; ?>
+							<?php 
+								$salaryMin = get_post_meta(get_the_ID(), 'job_salary_min', true);
+								if(!empty($salaryMin)) : 
+							?>
+							<div class="col-l-5-of-16 col-xs-1-of-1">
+								<p>
+									<strong><?php echo __('Salary:', 'searchit'); ?></strong>
+									<?php 
+										echo number_format(get_post_meta(get_the_ID(), 'job_salary_min', true), 0, ',', '.');
+									?>
+									<?php
+										$salaryMax = get_post_meta(get_the_ID(), 'job_salary_max', true); 
+										if(!empty($salaryMax)) : 
+									?>
+										-
+										<?php echo number_format(get_post_meta(get_the_ID(), 'job_salary_max', true), 0, ',', '.'); ?>
+									<?php endif; ?>
+									euro
+								</p>
+							</div>
+							<?php endif; ?>
+						</div>
+						<a href="<?php the_permalink(); ?>" class="job-readmore"><?php echo __('Read more', 'searchit'); ?></a>
+						<hr>
+					</div>
+				</div>
+			</article>
+			<?php endif; ?>
+		<?php endwhile; ?>
+		<?php else : ?>
+			<article class="the-job">
+				<h2>Nothing founded...</h2>
+			</article>
+			<?php
 	endif;
 	the_posts_pagination( array( 
 		'mid_size'  => 2,

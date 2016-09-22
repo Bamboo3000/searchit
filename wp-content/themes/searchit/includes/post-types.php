@@ -27,7 +27,6 @@ add_action( 'init', 'change_post_type_labels' );
 
 function custom_menu_page_removing() {
     remove_menu_page( 'edit-comments.php' );
-    // remove_menu_page( 'edit.php' );
 }
 add_action( 'admin_menu', 'custom_menu_page_removing' );
 
@@ -91,17 +90,6 @@ function testimonials_post_type() {
 	register_post_type( 'testimonials', $args );
 }
 add_action( 'init', 'testimonials_post_type', 0 );
-
-
-
-// add_action( 'admin_init', 'hide_editor_universal' );
-// function hide_editor_universal(){
-// 	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
-// 	$template_file = get_post_meta($post_id, '_wp_page_template', true);
-// 	if($template_file == 'templates/universal-template.php'){ // the filename of the page template
-// 		remove_post_type_support('page', 'editor');
-// 	}
-// }
 
 function create_team() {
 	register_post_type( 'team',
@@ -167,5 +155,4 @@ function remove_team_editor() {
 	remove_post_type_support( 'team', 'editor' );
 }
 
-
- ?>
+?>

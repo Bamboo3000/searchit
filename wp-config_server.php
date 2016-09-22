@@ -13,20 +13,20 @@
 *
 * @package WordPress
 */
-// global $memcached_servers;
-// $memcached_servers = array('default' => array('127.0.0.1:11211'));
-// global $memcached_blog_id;
-// $memcached_blog_id = $_SERVER['SERVER_NAME'];
-// define('FS_METHOD','direct');
+global $memcached_servers;
+$memcached_servers = array('default' => array('127.0.0.1:11211'));
+global $memcached_blog_id;
+$memcached_blog_id = $_SERVER['SERVER_NAME'];
+define('FS_METHOD','direct');
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'searchit');
+define('DB_NAME', 'ejbrecruit_db');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'ejbrecruit_XtQ');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'mamp');
+define('DB_PASSWORD', 'BWeGdKKC');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -41,8 +41,8 @@ define('DISABLE_WP_CRON', true);
 
 define('WP_MEMORY_LIMIT', '128M');
 
-define('WP_HOME','http://searchit.dev');
-define('WP_SITEURL','http://searchit.dev');
+define('WP_HOME','http://www.searchitrecruitment.com');
+define('WP_SITEURL','http://www.searchitrecruitment.com');
 
 /**#@+
 * Authentication Unique Keys and Salts.
@@ -91,7 +91,7 @@ $table_prefix  = 'wH9_';
 * It is strongly recommended that plugin and theme developers use WP_DEBUG
 * in their development environments.
 */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 

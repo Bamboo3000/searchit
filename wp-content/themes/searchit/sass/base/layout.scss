@@ -186,6 +186,8 @@ a:hover {
 .wrapper {
 	width: 100%;
 	height: auto;
+	min-height: 100%;
+	min-height: 100vh;
 	position: relative;
 	display: block;
 	padding: 0;
@@ -211,4 +213,32 @@ a:hover {
 	.wrapper{
 		padding-top: 0;
 	}
+}
+
+article {
+
+	ul,
+	li,
+	p {
+		font-size: 16px;
+		font-family: $mRegular;
+		font-weight: 400;
+		color: $grey;
+		line-height: 1.7;
+		
+		strong {
+			font-family: $mMedium;
+			font-weight: 600;
+		}
+		
+		@media(max-width: 1280px) {
+			font-size: 15px; 
+		}
+
+		@media(max-width: 799px) {
+			font-size: 14px;
+		}
+
+	}
+
 }

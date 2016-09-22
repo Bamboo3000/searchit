@@ -21,8 +21,6 @@ function moja_funkcja() {
 	$file = 'http://external.srch20.com/searchit/xml/jobs';
 	$xml = simplexml_load_file($file) or die("Error: Cannot create object");
 	$vacancy = $xml->vacancy;
-
-	// query_all_posts( $file );
 	
 	foreach($vacancy as $vacant) :
 		$postTitle = wp_strip_all_tags($vacant->title);
@@ -38,6 +36,8 @@ function moja_funkcja() {
 		$jobID = (string)$vacant->id;
 		$jobLat = (string)$vacant->lat;
 		$jobLng = (string)$vacant->lng;
+		$postNameDev = str_replace(" ", "-", $postTitle . " " . $jobID); 
+		$postName = filter_var($postNameDev, FILTER_SANITIZE_URL);
 
 		foreach($vacantCategory as $sCat) :
 			if($sCat['group'] == '#2 Skill Area'){
@@ -78,6 +78,7 @@ function moja_funkcja() {
 			$postarrup = array(
 				'ID' => $existingID,
 				'post_title' => $postTitle,
+				'post_name' => $postName,
 				'post_content' => $postContent,
 				'post_status' => 'publish',
 				'post_category' => array($allCat, $catid,),
@@ -98,6 +99,7 @@ function moja_funkcja() {
 				$postarrup = array(
 					'ID' => $existingID,
 					'post_title' => $postTitle,
+					'post_name' => $postName,
 					'post_content' => $postContent,
 					'post_status' => 'publish',
 					'post_category' => array($allCat, $catid,),
@@ -117,6 +119,7 @@ function moja_funkcja() {
 				$postarrup = array(
 					'ID' => $existing,
 					'post_title' => $postTitle,
+					'post_name' => $postName,
 					'post_content' => $postContent,
 					'post_status' => 'publish',
 					'post_category' => array($allCat, $catid,),
@@ -135,6 +138,7 @@ function moja_funkcja() {
 
 				$postarr = array(
 					'post_title' => $postTitle,
+					'post_name' => $postName,
 					'post_content' => $postContent,
 					'post_status' => 'publish',
 					'post_date' => $dateF,
@@ -215,43 +219,5 @@ function __update_post_meta( $post_id, $field_name, $value = '' ){
 function __delete_post_meta( $post_id, $field_name, $value = '' ){
     delete_post_meta( $post_id, $field_name );
 }
-
-
-// function query_all_posts( $file ){
-
-// 	$xml = simplexml_load_file($file) or die("Error: Cannot create object");
-// 	$vacancy = $xml->vacancy;
-
-// 	$wparray = array();
-// 	$cronarray = array();
-
-// 	foreach($vacancy as $vacant) :
-// 		$jobID = (string)$vacant->id;
-// 		array_push($cronarray, $jobID);
-// 	endforeach;
-
-// 	$args=array(
-// 	  'post_type' => 'post',
-// 	  'post_status' => 'publish',
-// 	  'posts_per_page' => -1,
-// 	);
-// 	$cron_query = null;
-// 	$cron_query = new WP_Query($args);
-// 	if ( $cron_query->have_posts() ) :
-// 		while ( $cron_query->have_posts() ) : $cron_query->the_post();
-			
-// 			$wp_job_id = get_post_meta( get_the_ID(), 'job_id', TRUE );
-// 			array_push($wparray, $wp_job_id);
-
-// 		endwhile;
-// 	endif;
-// 	wp_reset_query();
-
-// 	$diffarray = array_diff($wparray, $cronarray);
-
-// 	mail('pabis91@gmail.com', 'My Subject', $diffarray);
-
-// }
-
 
 ?>

@@ -10,16 +10,6 @@ add_filter('wp_calculate_image_sizes', '__return_false', PHP_INT_MAX);
 add_filter('wp_calculate_image_srcset', '__return_false', PHP_INT_MAX);
 remove_filter('the_content', 'wp_make_content_images_responsive');
 
-// add_action( 'admin_init', 'hide_editor' );
-// function hide_editor() {
-// $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
-// if( !isset( $post_id ) ) return;
-// $template_file = get_post_meta($post_id, '_wp_page_template', true);
-// if($template_file == 'templates/home-page.php'){ 
-// remove_post_type_support('page', 'editor');
-// }
-// }
-
 add_filter( 'meta_content', 'wptexturize' );
 add_filter( 'meta_content', 'convert_smilies' );
 add_filter( 'meta_content', 'convert_chars' );
@@ -33,21 +23,6 @@ add_filter( 'meta_content', 'wpautop' );
 add_filter( 'meta_content', 'shortcode_unautop' );
 add_filter( 'meta_content', 'prepend_attachment' );
 
-
-// function SearchFilter($query) {
-// if ($query->is_search && !is_admin()) {
-//     // are we wanting to search Custom posts?
-//     if ($_GET['bsearch'] == "yes"){
-//         $query->set('post_type', 'post');
-//     }
-//     else{
-//         //default behavour we want is to search posts only
-//         $query->set('post_type', 'post');
-//     }
-// }
-// return $query;
-// }
-// add_filter('pre_get_posts','SearchFilter');
 
 function languages_list(){
     $languages = icl_get_languages('skip_missing=0&orderby=code');
@@ -86,5 +61,44 @@ function languages_list_mobile(){
         ?></div><?php
     }
 }
+
+/**
+ * Add new columns to the post table
+ *
+ * @param Array $columns - Current columns on the list post
+ */
+function add_new_columns( $columns ) {
+    $column_meta = array( 'meta' => 'Job ID' );
+    $columns = array_slice( $columns, 0, 2, true ) + $column_meta + array_slice( $columns, 2, NULL, true );
+    return $columns;
+}
+
+// Add action to the manage post column to display the data
+add_action( 'manage_posts_custom_column' , 'custom_columns' );
+
+/**
+ * Display data in new columns
+ *
+ * @param  $column Current column
+ *
+ * @return Data for the column
+ */
+function custom_columns( $column ) {
+    global $post;
+
+    switch ( $column ) {
+        case 'meta':
+            $metaData = get_post_meta( $post->ID, 'job_id', true );
+            echo $metaData;
+        break;
+    }
+}
+
+// Register the column as sortable
+function register_sortable_columns( $columns ) {
+    $columns['meta'] = 'Job ID';
+    return $columns;
+}
+add_filter( 'manage_edit-post_sortable_columns', 'register_sortable_columns' );
 
  ?>
